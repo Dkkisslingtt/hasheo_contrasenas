@@ -1,0 +1,13 @@
+version: '3' # Docker-compose version
+# sudo docker build --tag first_docker_a-flask_app .
+# sudo docker container stop [id_container] - Esto detiene un contenedor activo.
+services: # Lista de servicios
+  flask_app: # Servicio / App de flask / Le podemos poner cualquier nombre.
+    build: # Lista de parámetros desde los cuales construir
+      context: . # Contexto
+      dockerfile: Dockerfile # Archivo de Dockerfile
+    ports: # Puerto contenedor:puerto host
+      - "5005:5005"
+    restart: always # En caso de error o falla
+    volumes: # Permiten actualizar constantemente el contenedor. / Nos ayuda a conectar nuestra máquina local con el contenedor.
+      - .:/hasheo_contraseñas # .(Todo lo que está en la carpeta:/(copialo en ->)hasheo_contraseñas)
