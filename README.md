@@ -35,12 +35,7 @@ bash
 Copy code
 source venv/bin/activate
 
-## Instala las dependencias desde el archivo requirements.txt:
-
-bash
-Copy code
-pip install -r requirements.txt
-Docker
+## Docker
 Para crear la imagen de Docker y ejecutar la aplicación en un contenedor, sigue estos pasos:
 
 Asegúrate de tener Docker instalado en tu sistema.
